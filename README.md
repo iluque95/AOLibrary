@@ -1,6 +1,6 @@
 # C++ Steroids for VB6
 
-Foobar is a Python library for dealing with word pluralization.
+Libreria is a library to speed up visual basic 6 limitations.
 
 ### **INI Files API**
 
