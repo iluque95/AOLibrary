@@ -4,33 +4,31 @@ Libreria is a library to speed up visual basic 6 limitations.
 
 ### **INI Files API**
 
-
 ```cpp
-	EXPORT void CALLBACK INI_MapFile(char *path, char *file);
-	EXPORT void CALLBACK INI_UnMapFile(char *file);
-	EXPORT void CALLBACK INI_Memory2DiskDump();
-	EXPORT void CALLBACK INI_DumpFile(char *path, char *file);
-	EXPORT BSTR CALLBACK INI_GetString(char *file, char *key, char *subkey);
-	EXPORT int32_t CALLBACK INI_GetLong(char *file, char *key, char *subkey);
-	EXPORT int16_t CALLBACK INI_GetInteger(char *file, char *key, char *subkey);
-	EXPORT uint8_t CALLBACK INI_GetByte(char *file, char *key, char *subkey);
-	EXPORT float CALLBACK INI_GetSingle(char *file, char *key, char *subkey);
-	EXPORT void CALLBACK INI_SetValue(char *file, char *key, char *subkey, char *value);
+EXPORT void CALLBACK INI_MapFile(char *path, char *file);
+EXPORT void CALLBACK INI_UnMapFile(char *file);
+EXPORT void CALLBACK INI_Memory2DiskDump();
+EXPORT void CALLBACK INI_DumpFile(char *path, char *file);
+EXPORT BSTR CALLBACK INI_GetString(char *file, char *key, char *subkey);
+EXPORT int32_t CALLBACK INI_GetLong(char *file, char *key, char *subkey);
+EXPORT int16_t CALLBACK INI_GetInteger(char *file, char *key, char *subkey);
+EXPORT uint8_t CALLBACK INI_GetByte(char *file, char *key, char *subkey);
+EXPORT float CALLBACK INI_GetSingle(char *file, char *key, char *subkey);
+EXPORT void CALLBACK INI_SetValue(char *file, char *key, char *subkey, char *value);
 ```
 
 ```vbnet
-	Public Declare Sub INI_MapFile Lib "libreria.dll" (ByVal path As String, ByVal file As String)
-	Public Declare Sub INI_UnMapFile Lib "libreria.dll" (ByVal file As String)
-	Public Declare Sub INI_Memory2DiskDump Lib "libreria.dll" ()
-	Public Declare Sub INI_DumpFile Lib "libreria.dll" (ByVal path As String, ByVal file As String)
-	Public Declare Function INI_GetString Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As String
-	Public Declare Function INI_GetLong Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Long
-	Public Declare Function INI_GetInteger Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Integer
-	Public Declare Function INI_GetByte Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Byte
-	Public Declare Function INI_GetSingle Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Single
-	Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String, ByVal Value As String)
+Public Declare Sub INI_MapFile Lib "libreria.dll" (ByVal path As String, ByVal file As String)
+Public Declare Sub INI_UnMapFile Lib "libreria.dll" (ByVal file As String)
+Public Declare Sub INI_Memory2DiskDump Lib "libreria.dll" ()
+Public Declare Sub INI_DumpFile Lib "libreria.dll" (ByVal path As String, ByVal file As String)
+Public Declare Function INI_GetString Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As String
+Public Declare Function INI_GetLong Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Long
+Public Declare Function INI_GetInteger Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Integer
+Public Declare Function INI_GetByte Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Byte
+Public Declare Function INI_GetSingle Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Single
+Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String, ByVal Value As String)
 ```
-
 
 - ##### INI_MapFile
 
@@ -76,25 +74,25 @@ Libreria is a library to speed up visual basic 6 limitations.
 ### Under investigation
 
 ```cpp
-	EXPORT int CALLBACK path_exist(char *path);
-	EXPORT int CALLBACK thread_creation(int addr);
-	EXPORT void CALLBACK Data_type(VARIANT data);
+EXPORT int CALLBACK path_exist(char *path);
+EXPORT int CALLBACK thread_creation(int addr);
+EXPORT void CALLBACK Data_type(VARIANT data);
 ```
 
 - ##### Filesystem
 
 ```vbnet
-	Public Declare Function path_exist Lib "libreria.dll" (ByVal path As String) As Long
+Public Declare Function path_exist Lib "libreria.dll" (ByVal path As String) As Long
 ```
 
 - ##### Threads
 
 ```vbnet
-	Public Declare Function thread_creation Lib "libreria.dll" (ByVal dir As Long) As Long
+Public Declare Function thread_creation Lib "libreria.dll" (ByVal dir As Long) As Long
 ```
 
 - ##### Variant data type
 
 ```vbnet
-	Public Declare Sub Data_type Lib "libreria.dll" (ByVal value As Variant)
+Public Declare Sub Data_type Lib "libreria.dll" (ByVal value As Variant)
 ```
