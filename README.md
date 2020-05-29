@@ -6,7 +6,7 @@ Libreria is a library to speed up visual basic 6 limitations.
 
 - ##### INI_MapFile
 
-```visualbasic
+```vbnet
 Public Declare Sub INI_MapFile Lib "libreria.dll" (ByVal path As String, ByVal file As String)
 ```
 
@@ -14,7 +14,7 @@ Public Declare Sub INI_MapFile Lib "libreria.dll" (ByVal path As String, ByVal f
 
 - ##### INI_UnMapFile 
 
-```visualbasic
+```vbnet
 Public Declare Sub INI_UnMapFile Lib "libreria.dll" (ByVal file As String)
 ```
 
@@ -22,7 +22,7 @@ Public Declare Sub INI_UnMapFile Lib "libreria.dll" (ByVal file As String)
 
 - ##### INI_Memory2DiskDump
 
-```visualbasic
+```vbnet
 Public Declare Sub INI_Memory2DiskDump Lib "libreria.dll" ()
 ```
 
@@ -30,7 +30,7 @@ Public Declare Sub INI_Memory2DiskDump Lib "libreria.dll" ()
 
 - ##### INI_DumpFile
 
-```visualbasic
+```vbnet
 Public Declare Sub INI_DumpFile Lib "libreria.dll" (ByVal path As String, ByVal File As String)
 ```
 
@@ -38,7 +38,7 @@ Public Declare Sub INI_DumpFile Lib "libreria.dll" (ByVal path As String, ByVal 
 
 - ##### INI_GetString
 
-```visualbasic
+```vbnet
 Public Declare Function INI_GetString Lib "libreria.dll" (ByVal File As String, ByVal key As String, ByVal subkey As String) As String
 ```
 
@@ -46,7 +46,7 @@ Public Declare Function INI_GetString Lib "libreria.dll" (ByVal File As String, 
 
 - ##### INI_GetLong
 
-```visualbasic
+```vbnet
 Public Declare Function INI_GetLong Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Long
 ```
 
@@ -54,14 +54,14 @@ Public Declare Function INI_GetLong Lib "libreria.dll" (ByVal file As String, By
 
 - ##### INI_GetInteger
 
-```visualbasic
+```vbnet
 Public Declare Function INI_GetInteger Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Integer
 ```
 > Get value casted on to 2 Bytes.
 
 - ##### INI_GetByte
 
-```visualbasic
+```vbnet
 Public Declare Function INI_GetByte Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Byte
 ```
 
@@ -69,7 +69,7 @@ Public Declare Function INI_GetByte Lib "libreria.dll" (ByVal file As String, By
 
 - ##### INI_GetSingle
 
-```visualbasic
+```vbnet
 Public Declare Function INI_GetSingle Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Single
 ```
 
@@ -77,7 +77,7 @@ Public Declare Function INI_GetSingle Lib "libreria.dll" (ByVal file As String, 
 
 - ##### INI_SetValue 
 
-```visualbasic
+```vbnet
 Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String, ByVal Value As String)
 ```
 
@@ -88,18 +88,18 @@ Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, B
 
 - ##### Filesystem
 
-```visualbasic
+```vbnet
 Public Declare Function path_exist Lib "libreria.dll" (ByVal path As String) As Long
 ```
 
 - ##### Threads
 
-```visualbasic
+```vbnet
 Public Declare Function thread_creation Lib "libreria.dll" (ByVal dir As Long) As Long
 ```
 
 - ##### Variant data type
 
-```visualbasic
+```vbnet
 Public Declare Sub Data_type Lib "libreria.dll" (ByVal Value As Variant)
 ```
