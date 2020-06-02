@@ -13,37 +13,46 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado\inc">
+      <UniqueIdentifier>{958c499f-1bc1-4073-af1a-a4de86ebafd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\src">
+      <UniqueIdentifier>{2a012010-cf2e-4fa1-8d9c-9b9a21676c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\res">
+      <UniqueIdentifier>{b28a1495-1221-40d1-a0ce-529cd832f010}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Archivos de encabezado\inc</Filter>
+    </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\inc</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\inc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="dllmain.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="libreria.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\src</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Archivos de origen\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Source.def">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\res</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc">
-      <Filter>Archivos de recursos</Filter>
+      <Filter>Archivos de origen\res</Filter>
     </ResourceCompile>
   </ItemGroup>
 </Project>

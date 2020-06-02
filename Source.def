@@ -11,6 +11,7 @@ INI_GetLong
 INI_GetInteger
 INI_GetByte
 INI_GetSingle
+INI_GetBoolean
 INI_SetValue
 
 path_exist

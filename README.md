@@ -14,6 +14,7 @@ EXPORT int32_t CALLBACK INI_GetLong(char *file, char *key, char *subkey);
 EXPORT int16_t CALLBACK INI_GetInteger(char *file, char *key, char *subkey);
 EXPORT uint8_t CALLBACK INI_GetByte(char *file, char *key, char *subkey);
 EXPORT float CALLBACK INI_GetSingle(char *file, char *key, char *subkey);
+EXPORT bool CALLBACK INI_GetBoolean(char *file, char *key, char *subkey);
 EXPORT void CALLBACK INI_SetValue(char *file, char *key, char *subkey, char *value);
 ```
 
@@ -27,7 +28,8 @@ Public Declare Function INI_GetLong Lib "libreria.dll" (ByVal file As String, By
 Public Declare Function INI_GetInteger Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Integer
 Public Declare Function INI_GetByte Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Byte
 Public Declare Function INI_GetSingle Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Single
-Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String, ByVal Value As String)
+Public Declare Function INI_GetBoolean Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Boolean
+Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String, ByVal value As String)
 ```
 
 - ##### INI_MapFile
@@ -65,6 +67,10 @@ Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, B
 - ##### INI_GetSingle
 
 > Get value casted on decimal value 4 bytes.
+
+- ##### INI_GetBoolean
+
+> Get value casted on to 1 Byte (true/false).
 
 - ##### INI_SetValue 
 
