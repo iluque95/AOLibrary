@@ -14,6 +14,11 @@ INI_GetSingle
 INI_GetBoolean
 INI_SetValue
 
+MM_ReadMaps
+MM_NpcsSize
+MM_GetNpcPos
+MM_Forward
+
 path_exist
 thread_creation
 Data_type

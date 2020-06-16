@@ -77,6 +77,53 @@ Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, B
 > Set value on to mapped file.
 
 
+### **Map Manager API**
+```cpp
+EXPORT void CALLBACK MM_ReadMaps(char* path, SAFEARRAY **mapblock);
+EXPORT uint16_t CALLBACK MM_NpcsSize();
+EXPORT WorldPos CALLBACK MM_GetNpcPos();
+EXPORT bool CALLBACK MM_Forward();
+```
+
+```vbnet
+Public Declare Sub MM_ReadMaps Lib "libreria.dll" (ByVal path As String, mapdata() As MapBlock)
+Public Declare Function MM_NpcsSize Lib "libreria.dll" () As Integer
+Public Declare Function MM_GetNpcPos Lib "libreria.dll" () As WorldPos
+Public Declare Function MM_Forward Lib "libreria.dll" () As Boolean
+```
+
+### **Unused**
+
+```cpp
+EXPORT uint16_t CALLBACK MM_GetNPC(uint64_t encoded);
+EXPORT uint16_t CALLBACK MM_GetMap(uint64_t encoded);
+EXPORT uint8_t CALLBACK MM_GetX(uint64_t encoded);
+EXPORT uint8_t CALLBACK MM_GetY(uint64_t encoded);
+```
+
+```vbnet
+Public Declare Function MM_GetNPC Lib "libreria.dll" (ByVal encoded As Double) As Integer
+Public Declare Function MM_GetMap Lib "libreria.dll" (ByVal encoded As Double) As Integer
+Public Declare Function MM_GetX Lib "libreria.dll" (ByVal encoded As Double) As Byte
+Public Declare Function MM_GetY Lib "libreria.dll" (ByVal encoded As Double) As Byte
+```
+
+- ##### MM_ReadMaps 
+
+> Read all file maps in to mapdata SAFEARRAY buffering data in an asynchronously way.
+
+- ##### MM_NpcsSize 
+
+> Returns vector size of npcs founded while reading.
+
+- ##### MM_GetNpcPos 
+
+> Returns world position structure; map, x and y from current vector index.
+
+- ##### MM_Forward 
+
+> Forward index of npcs vector.
+
 ### Under investigation
 
 ```cpp
