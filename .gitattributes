@@ -212,3 +212,7 @@ Procfile text
 *.exe binary
 *.out binary
 *.app binary
+
+##### Diff !!
+*.cpp crlf diff
+*.h crlf diff
