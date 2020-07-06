@@ -229,8 +229,8 @@ std::vector<WorldPos> MM_ReadMap(char* path, uint16_t map, SAFEARRAY **mapblock)
 
 	long rgIndices[3] = {map,0,0};
 
-	for (auto y = 1U; y <= 100; ++y)
-		for (auto x = 1U; x <= 100; ++x)
+	for (auto x = 1U; x <= 100; ++x)
+		for (auto y = 1U; y <= 100; ++y)
 		{
 			rgIndices[1] = x;
 			rgIndices[2] = y;
@@ -300,7 +300,7 @@ void MM_ReadMaps(char *path, SAFEARRAY **mapblock/*, SAFEARRAY **npcs*/)
 			//for (auto& value : res)
 				//csaData.Add(value);
 
-	},false);
+	},true);
 
 	//csaData.CopyTo(npcs);
 
