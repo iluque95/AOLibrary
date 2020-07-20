@@ -8,7 +8,9 @@ Libreria is a library to speed up visual basic 6 limitations.
 EXPORT void CALLBACK INI_MapFile(char *path, char *file);
 EXPORT void CALLBACK INI_UnMapFile(char *file);
 EXPORT void CALLBACK INI_Memory2DiskDump();
+EXPORT void CALLBACK INI_Memory2DiskDumpInBG();
 EXPORT void CALLBACK INI_DumpFile(char *path, char *file);
+EXPORT void CALLBACK INI_DumpFileInBG(char *path, char *file);
 EXPORT BSTR CALLBACK INI_GetString(char *file, char *key, char *subkey);
 EXPORT int32_t CALLBACK INI_GetLong(char *file, char *key, char *subkey);
 EXPORT int16_t CALLBACK INI_GetInteger(char *file, char *key, char *subkey);
@@ -22,7 +24,9 @@ EXPORT void CALLBACK INI_SetValue(char *file, char *key, char *subkey, char *val
 Public Declare Sub INI_MapFile Lib "libreria.dll" (ByVal path As String, ByVal file As String)
 Public Declare Sub INI_UnMapFile Lib "libreria.dll" (ByVal file As String)
 Public Declare Sub INI_Memory2DiskDump Lib "libreria.dll" ()
+Public Declare Sub INI_Memory2DiskDumpInBG Lib "libreria.dll" ()
 Public Declare Sub INI_DumpFile Lib "libreria.dll" (ByVal path As String, ByVal file As String)
+Public Declare Sub INI_DumpFileInBG Lib "libreria.dll" (ByVal path As String, ByVal file As String)
 Public Declare Function INI_GetString Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As String
 Public Declare Function INI_GetLong Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Long
 Public Declare Function INI_GetInteger Lib "libreria.dll" (ByVal file As String, ByVal key As String, ByVal subkey As String) As Integer
@@ -44,9 +48,17 @@ Public Declare Function INI_SetValue Lib "libreria.dll" (ByVal file As String, B
 
 > Dump all mapped files in memory to disk.
 
+- ##### INI_Memory2DiskDumpInBG
+
+> Dump all mapped files in memory to disk in a separated thread on background without stop main thread.
+
 - ##### INI_DumpFile
 
 > Dump a given mapped file to disk.
+
+- ##### INI_DumpFileInBG
+
+> Dump a given mapped file to disk in a separated thread on background without stop main thread.
 
 - ##### INI_GetString
 
@@ -127,15 +139,8 @@ Public Declare Function MM_GetY Lib "libreria.dll" (ByVal encoded As Double) As 
 ### Under investigation
 
 ```cpp
-EXPORT int CALLBACK path_exist(char *path);
 EXPORT int CALLBACK thread_creation(int addr);
 EXPORT void CALLBACK Data_type(VARIANT data);
-```
-
-- ##### Filesystem
-
-```vbnet
-Public Declare Function path_exist Lib "libreria.dll" (ByVal path As String) As Long
 ```
 
 - ##### Threads

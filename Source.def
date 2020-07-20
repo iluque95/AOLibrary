@@ -5,7 +5,9 @@ EXPORTS
 INI_MapFile
 INI_UnMapFile
 INI_Memory2DiskDump
+INI_Memory2DiskDumpInBG
 INI_DumpFile
+INI_DumpFileInBG
 INI_GetString
 INI_GetLong
 INI_GetInteger
@@ -19,6 +21,5 @@ MM_NpcsSize
 MM_GetNpcPos
 MM_Forward
 
-path_exist
 thread_creation
 Data_type

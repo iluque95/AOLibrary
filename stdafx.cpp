@@ -7,47 +7,6 @@
 // TODO: mencionar los encabezados adicionales que se necesitan en STDAFX.H
 // pero no en este archivo
 
-int path_exist(char *path)
-{
-
-	fs::path aPath{ path };
-
-	//MSGBOX("Punto 1 " << path);
-
-	auto ret = fs::exists(aPath);
-
-	std::unordered_map<std::string, int> umap;
-
-	umap["Judit"] = 23;
-	umap["Itiel"] = 25;
-
-	//for (auto x : umap)
-	//	MSGBOX(x.first + " --> " << x.second);
-
-	//return !(umap.find(path) == umap.end());
-
-
-	auto i = 0U;
-	std::string line;
-	/*
-	std::ifstream ifs("OBJs.dat", std::ifstream::in); // | std::ifstream::binary
-
-	
-	if (ifs.is_open())
-
-		while (i < 25)
-		{
-			getline(ifs, line);
-			MSGBOX(line);
-			++i;
-		}
-
-	ifs.close();
-	*/
-
-	return (uint32_t)fs::file_size("OBJs.dat");//std::thread::hardware_concurrency();//ret;
-}
-
 void fn(int addr)
 {
 	while (isRunning)
@@ -135,7 +94,13 @@ void INI_Memory2DiskDump()
 	}
 }
 
-EXPORT void CALLBACK INI_DumpFile(char *path, char *file)
+void INI_Memory2DiskDumpInBG()
+{
+	std::thread t(INI_Memory2DiskDump);
+	t.detach();
+}
+
+void INI_DumpFile(char *path, char *file)
 {
 	std::ofstream ofs(std::string(path).append(file));
 	
@@ -151,6 +116,12 @@ EXPORT void CALLBACK INI_DumpFile(char *path, char *file)
 	}
 
 	ofs.close();
+}
+
+void INI_DumpFileInBG(char* path, char* file)
+{
+	std::thread t(INI_DumpFile, path, file);
+	t.detach();
 }
 
 BSTR INI_GetString(char *file, char *key, char *subkey)

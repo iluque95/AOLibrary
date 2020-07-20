@@ -7,7 +7,9 @@
 EXPORT void CALLBACK INI_MapFile(char *path, char *file);
 EXPORT void CALLBACK INI_UnMapFile(char *file);
 EXPORT void CALLBACK INI_Memory2DiskDump();
+EXPORT void CALLBACK INI_Memory2DiskDumpInBG();
 EXPORT void CALLBACK INI_DumpFile(char *path, char *file);
+EXPORT void CALLBACK INI_DumpFileInBG(char* path, char* file);
 EXPORT BSTR CALLBACK INI_GetString(char *file, char *key, char *subkey);
 EXPORT int32_t CALLBACK INI_GetLong(char *file, char *key, char *subkey);
 EXPORT int16_t CALLBACK INI_GetInteger(char *file, char *key, char *subkey);
