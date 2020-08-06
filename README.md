@@ -6,7 +6,7 @@ Libreria is a library to speed up visual basic 6 limitations.
 
 ![](pruebas/Captura.PNG)
 
-On my setup (i7-9700k, 3200 MHz RAM the Speed Up is 7,94 times faster. In other setups is 12x times average faster.
+On my setup (i7-9700k, 3200 MHz RAM) the Speed Up is 7,94 times faster. In other setups less powerful is 12x times average faster.
 Easy way to map into memory files with O(1) speed and O(n)*k*y*z being n the number of keys to store, y subkeys, k their elements and z the files itself.
 
 ```cpp
@@ -159,3 +159,16 @@ Public Declare Function thread_creation Lib "libreria.dll" (ByVal dir As Long) A
 ```vbnet
 Public Declare Sub Data_type Lib "libreria.dll" (ByVal value As Variant)
 ```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Contact
+
+You can send me a private message on telegram [@CRaW69](https://t.me/CRaW69).
+
+## License
+
+[GNU](LICENSE.md)
