@@ -1,0 +1,7 @@
+[History]
+1=#P0#=mb	#P1#=Command3_Click	#P2#=Proyecto1/Form1/Command3_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200528134530	#P7#=0	#P8#=22	.
+2=#P0#=mb	#P1#=Form_Load	#P2#=Proyecto1/Form1/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200528131647	#P7#=0	#P8#=15	.
+3=#P0#=mb	#P1#=testing	#P2#=Proyecto1/Form1/testing	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200526182235	#P7#=0	#P8#=0	.
+4=#P0#=mb	#P1#=Command1_Click	#P2#=Proyecto1/Form1/Command1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200526182139	#P7#=0	#P8#=-4	.
+5=#P0#=mb	#P1#=increment_counter	#P2#=Proyecto1/Module1/increment_counter	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200526175256	#P7#=0	#P8#=3	.
+6=#P0#=mb	#P1#=Command2_Click	#P2#=Proyecto1/Form1/Command2_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200526134325	#P7#=0	#P8#=1	.

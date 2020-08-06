@@ -4,6 +4,11 @@ Libreria is a library to speed up visual basic 6 limitations.
 
 ### **INI Files API**
 
+![](pruebas/Captura.PNG)
+
+On my setup (i7-9700k, 3200 MHz RAM the Speed Up is 7,94 times faster. In other setups is 12x times average faster.
+Easy way to map into memory files with O(1) speed and O(n)*k*y*z being n the number of keys to store, y subkeys, k their elements and z the files itself.
+
 ```cpp
 EXPORT void CALLBACK INI_MapFile(char *path, char *file);
 EXPORT void CALLBACK INI_UnMapFile(char *file);
